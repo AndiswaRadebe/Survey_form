@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey form</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <h1 id="title">Survey Form</h2>
+      <p id="description">Complete this form to determine what kind of a developer you are.</p>
+      <form id="survey-form">
+        <fieldset>
+          <label id="name-label" placeholder="Enter your name"><b> Name<b/> <input id="name" type="text" placeholder="Enter your name" id="name-label" required /></label>
+          <label id="email-label" > Email
+            <input id="email" type="email" placeholder="Enter your email" required/></label>
+            <label id="number-label" >Age(optional)<input id="number" type="number" min="18" max="65" placeholder="Age"/></label>
+            <label>Which option best describes your current role?
+              <select>
+                <option value="">Select your option</option>
+                <option value="1">Back-end developer</option>
+                <option value="2">Front-end developer</option>
+                <option value="3">Full stack developer</option>
+                <option value="4">Web developer</option>
+                <option value="5">Software developer</option>
+                <option>Other</option>
+                </label>
+                </select>
+                <label>If you have chosen other, indicate which below: <input id="other" type="text" placeholder="I'm currently studying to be a developer..." </label>
+            </fieldset>
+            <fieldset>
+              <label>Would you like to learn more about being a developer?</label>
+              <select id="dropdown">
+              <option value="">Select one option</option>
+              <option value="1">Yes</option>
+              <option>No</option>
+               </select>
+               <label>Would you encourage your family or friends to become developers?</label>
+               <label><input type="radio" value="definetly" id="definetly" class="inline" name="option"/>Yes</label>
+               <label><input type="radio" value="no" id="no" class="inline" name="option"> No</label>
+               <label><input type="radio" value="maybe" id="maybe" name="option" class="inline">Maybe </label>
+               </fieldset>
+               <fieldset>
+                 <label>What improvements should be made? (Check all that apply)</label>
+                 <label><input type="checkbox" value="front" class="inline">Front-end projects</label>
+                 <label><input type="checkbox"  value="back" class="inline">Back-end projects</label>
+                 <label><input type="checkbox"  value="video" class="inline">Video tutorials</label>
+                 <label><input type="checkbox" value="challenges" class="inline">Challenges</label>
+                 <label><input type="checkbox"  value="discuss" class="inline">Thoroughly discussing projects</label>
+                 <label><input type="checkbox" value="team" class="inline">Team projects</label>
+                 <label><input type="checkbox" value="training" class="inline">More training</label>
+                 <label><input type="checkbox" value="additional-courses" class="inline">Additional courses</label>
+                 <label>Additional comments/suggestions:
+                   <textarea placeholder="Enter your comment here..." class ="inline" rows="5" cols="75"></textarea>
+                   </label>
+                   <input id="submit" type="submit" value="submit"/>
+        </form>
+      </body>
+  </html>
+
+/*CSS*/
+body
+{
+  margin: 0 auto;
+  background-color: #E76F51;
+}
+fieldset
+{
+background-color: #F4A261;
+border: none;
+}
+label,select
+{
+  font-size:18;
+  display: block;
+  margin: 0.5rem 0;
+  min-height: 2em
+}
+h1,p
+{
+  text-align: center;
+}
+input
+{
+  margin: 10px 0 0 0;
+  width: 100%;
+}
+.inline
+{
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+textarea
+{
+  margin: 10px 0 0 0;
+  font-size: 15;
+  display: block;
+  width: 100%; 
+  min-height: 2em;
+  padding: auto;
+}
+input[type="submit"]
+{
+  display: block;
+  width: 25%;
+  margin: auto;
+  border-color: black;
+}
